@@ -8,6 +8,8 @@ int main () {
     float areaEmKm1;
     float pib1;
     int numeroPontosTuristicos1;
+    double densidadePopulacional1;
+    double pibPerCapita1;
 
     //CARTA 1
     printf("Digite o Estado da carta 1: \n");
@@ -31,6 +33,9 @@ int main () {
     printf("Digite a quantidade de pontos turísticos da carta 1: \n");
     scanf("%d", &numeroPontosTuristicos1);
 
+    densidadePopulacional1 = populacaoCidade1 / areaEmKm1;
+    pibPerCapita1 = pib1 / populacaoCidade1;
+
     //------------------------------------------------------------------------//
 
     // CARTA 2
@@ -41,12 +46,10 @@ int main () {
     float areaEmKm2;
     float pib2;
     int numeroPontosTuristicos2;
+    double densidadePopulacional2;
+    double pibPerCapita2;
 
-
-    printf("");
-    printf("--------------------------------------\n");
     printf("Agora vamos para a carta nº2:\n");
-    printf("--------------------------------------\n");
     printf("Digite o Estado da carta 2: \n");
     scanf("%s", estado2);
     
@@ -68,6 +71,9 @@ int main () {
     printf("Digite a quantidade de pontos turísticos da carta 2: \n");
     scanf("%d", &numeroPontosTuristicos2);
 
+    densidadePopulacional2 = populacaoCidade2 / areaEmKm2;
+    pibPerCapita2 = pib2 / populacaoCidade2;
+
 
     //------------------------------------------------------------------------//
     //EXIBIÇÃO CARTAS 
@@ -82,6 +88,8 @@ int main () {
     printf("Área km²: %.2f km² \n", areaEmKm1);
     printf("PIB: R$%.2f\n", pib1);
     printf("Pontos Turísticos: %d\n", numeroPontosTuristicos1);
+    printf("Densidade Populacional: %.3f hab/km²\n", densidadePopulacional1);
+    printf("PIB Per Capita: %.3f reais", pibPerCapita1);
     printf("\n");
     
     printf("-----------------------------------------------------------\n");
@@ -95,6 +103,8 @@ int main () {
     printf("Área km²: %.2f km² \n", areaEmKm2);
     printf("PIB: R$%.2f\n", pib2);
     printf("Pontos Turísticos: %d\n", numeroPontosTuristicos2);
+    printf("Densidade Populacional: %.3f hab/km²\n", densidadePopulacional2);
+    printf("PIB Per Capita: %.3f reais", pibPerCapita2);
     
     return 0;
 
